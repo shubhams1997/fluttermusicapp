@@ -1,10 +1,14 @@
 # music
 
-A new Flutter project.
+This is a Flutter Music App UI.
 
-## Getting Started
+## Music App Screenshots
 
-This project is a starting point for a Flutter application.
+![Screenshot 1](https://github.com/shubhamsharma199782/fluttermusicapp/blob/master/Screenshot1.png)
+
+![Screenshot 1](https://github.com/shubhamsharma199782/fluttermusicapp/blob/master/Screenshot2.png)
+
+
 
 A few resources to get you started if this is your first Flutter project:
 
