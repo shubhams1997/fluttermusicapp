@@ -231,10 +231,10 @@ class SongsList extends StatelessWidget {
             constraints: BoxConstraints(maxHeight: 300),
             child: ListView.builder(
               itemCount: 10,
-              itemBuilder: (BuildContext context, i){
+              itemBuilder: (BuildContext context, i) {
                 return ListedSong(i);
               },
-            ), 
+            ),
           ),
         ],
       ),
@@ -258,13 +258,16 @@ class _ListedSongState extends State<ListedSong> {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context){
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
           return SongPage(i);
         }));
       },
-      leading: ClipRRect(
-        borderRadius: BorderRadius.circular(16.0),
-        child: Image.asset('images/thumb/$i.jpeg', scale: 3.4),
+      leading: Hero(
+        tag: "listed-song-img$i",
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(16.0),
+          child: Image.asset('images/thumb/$i.jpeg', scale: 3.4),
+        ),
       ),
       title: Text(wordPair.asPascalCase),
       subtitle: Text("15,900,781 Played"),

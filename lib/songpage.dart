@@ -135,9 +135,12 @@ class SongInfo extends StatelessWidget {
               maxWidth: 150,
             ),
             height: 120,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset('images/thumb/$i.jpeg'),
+            child: Hero(
+              tag: "listed-song-img$i",
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset('images/thumb/$i.jpeg'),
+              ),
             ),
           ),
           Column(
